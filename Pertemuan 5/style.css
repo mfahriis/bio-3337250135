@@ -82,7 +82,6 @@ footer {
         padding: 24px;
     }
 
-    /* Saat layar lebar, item header berubah menjadi berdampingan (row) */
     .header-content {
         flex-direction: row;
         justify-content: space-between;
@@ -123,12 +122,11 @@ body.dark .skill-item {
 
 /* Ketika body mengaktifkan dark-mode, ubah isi di dalam .card menjadi gelap */
 body.dark .card {
-    background-color: #1e293b !important; /* Mengubah latar belakang kotak jadi biru gelap/abu-abu tua */
-    color: #f8fafc !important;            /* Mengubah warna teks judul & isi menjadi putih terang */
-    border-color: #334155 !important;      /* Mengubah warna garis tepi kotak agar lebih soft di malam hari */
+    background-color: #1e293b !important; 
+    color: #f8fafc !important;            
+    border-color: #334155 !important;      
 }
 
-/* Opsional: Mengubah teks tabel di dalam riwayat agar ikut terang saat dark mode */
 body.dark table, 
     body.dark td {
         color: #f8fafc !important;

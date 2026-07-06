@@ -15,6 +15,7 @@ btnToggle.addEventListener("click", () => {
   }
 });
 
+// Agar mode gelap tetap tersimpan saat halaman di-refresh
 btnToggle.addEventListener("click", () => {
   body.classList.toggle("dark");
   const isDark = body.classList.contains("dark");
@@ -28,6 +29,7 @@ if (localStorage.getItem("darkMode") === "true") {
   btnToggle.textContent = "☀️ Light Mode";
 }
 
+// Tampilkan berapa kali pengguna mengklik tombol toggle
 let hitungan = 0;
 
 btnToggle.addEventListener("click", () => {
