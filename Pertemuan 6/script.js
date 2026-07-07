@@ -38,42 +38,34 @@ btnToggle.addEventListener("click", () => {
   console.log(`Mode diganti ${hitungan} kali`);
 });
 
-// ===== FETCH API: FAKTA KUCING =====
 
 const isiFakta   = document.querySelector("#isi-fakta");
 const btnRefresh = document.querySelector("#btnRefresh");
 
 async function ambilFakta() {
-  // Tampilkan loading indicator
   isiFakta.textContent = "⏳ Memuat fakta...";
 
   try {
     const response = await fetch("https://catfact.ninja/fact");
 
-    // Cek apakah HTTP response OK (status 200-299)
     if (!response.ok) {
       throw new Error("HTTP Error: " + response.status);
     }
 
     const data = await response.json();
 
-    // Tampilkan fakta ke DOM
     isiFakta.textContent = data.fact;
 
   } catch (error) {
-    // Tampilkan pesan error yang ramah
     isiFakta.textContent = "⚠️ Gagal memuat fakta. Cek koneksi internet Anda.";
     console.error("Error:", error.message);
   }
 }
 
-// Jalankan saat halaman pertama kali dimuat
 ambilFakta();
 
-// Jalankan ulang saat tombol diklik
 btnRefresh.addEventListener("click", ambilFakta);
 
-// Kumpulkan beberapa fakta dalam array
 const koleksiFakta = [];
 
 async function ambilDanSimpan() {
@@ -81,14 +73,12 @@ async function ambilDanSimpan() {
   const data = await response.json();
   koleksiFakta.push(data.fact);
 
-  // Render semua fakta yang sudah terkumpul ke dalam <ul>
   const ul = document.querySelector("#daftar-fakta");
   ul.innerHTML = koleksiFakta
     .map(fakta => `<li>${fakta}</li>`)
     .join("");
 }
 
-// Perintah di bawah modul: panggil ambilDanSimpan() beberapa kali
 ambilDanSimpan();
 ambilDanSimpan();
 ambilDanSimpan();
