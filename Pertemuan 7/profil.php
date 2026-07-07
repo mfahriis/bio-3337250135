@@ -2,16 +2,16 @@
 echo "<link rel='stylesheet' href='style.css'>";
 // === DATA MAHASISWA ===
 $mahasiswa = [
-    "nama"    => "Nama Lengkap Anda",
-    "nim"     => "NIM Anda",
+    "nama"    => "Muhamad Fahri Indra Saputra",
+    "nim"     => "3337250135",
     "prodi"   => "Informatika",
-    "angkatan"=> 2022,
+    "angkatan"=> 2025,
     "ipk"     => 3.85,
-    "email"   => "email@anda.com",
-    "github"  => "https://github.com/username-anda",
+    "email"   => "mfahriis081207@gmail.com",
+    "github"  => "https://github.com/mfahriis",
     "skill"   => ["HTML", "CSS", "JavaScript", "PHP", "Git"],
     "bio"     => "Saya adalah mahasiswa Informatika UNTIRTA yang
-                  bersemangat belajar teknologi web.",
+                  bersemangat belajar teknologi web dan suka mencari pengetahuan.",
 ];
 
 // === FUNGSI HELPER ===
