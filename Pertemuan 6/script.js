@@ -57,7 +57,7 @@ async function ambilFakta() {
     isiFakta.textContent = data.fact;
 
   } catch (error) {
-    isiFakta.textContent = "⚠️ Gagal memuat fakta. Cek koneksi internet Anda.";
+    isiFakta.textContent = "⚠️ Gagal memuat fakta kucing  . Cek koneksi internet Anda.";
     console.error("Error:", error.message);
   }
 }
@@ -79,6 +79,3 @@ async function ambilDanSimpan() {
     .join("");
 }
 
-ambilDanSimpan();
-ambilDanSimpan();
-ambilDanSimpan();
